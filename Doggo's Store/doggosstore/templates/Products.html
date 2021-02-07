@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block main %}
+   <!-- marketing information -->
+ <!-- marketing information -->
+ <section class="first">
+    <div class="container">
+        <div class="text-white text-center">
+            <div>
+                <p class="h1 text-white mb-4">Why us?</p>
+            </div>
+        </div>
+        <!-- CSS Grid -->
+        <div >
+        <div class="row">
+            <div class="col-md-6">
+                <article>
+                    <h3 class="h3 text-white">We Know U love your Doggo</h3>
+                </article>
+
+            </div>
+            <div>
+                <div class="col-md-12">
+                    <article>
+                        <h3 class="h3 text-white">We also Want the best for your Doggo</h3>
+                    </article>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        
+        <!-- Horizontal Rule -->
+        <hr>
+    </div>
+</section>
+<!-- display tours for the specific Items -->
+<section>
+
+    <div class="text-dark text-center">
+        <div>
+            <p class="h3 text-dark mb-4">Select a Item from below</p>
+        </div>
+    </div>
+
+    <div class="card-deck">
+        <!-- each tour is a bootstrap card -->
+        {% for item in item%}
+        <div class="card">
+            <img class="card-img-top" src="{{url_for('static', filename='img/'+item.image)}}" alt="Card image">
+            <div class="card-body">
+                <h4 class="card-title">{{item.name}}</h4>
+                <p class="card-text">{{item.description}}</p>
+                <h5 class="card-text">Price:{{ "$%.2f"|format(item.price) }}</h5>
+            </div>
+            <div class="card-footer">
+                <form action="{{ url_for('main.order') }}">
+                    <input type="hidden" id="item_id" name="item_id" value="{{ item.id }}">
+                    <input class="btn btn-dark" type="submit" value="Add to Basket">
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</section>
+{% endblock %}
+

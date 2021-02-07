@@ -1,0 +1,77 @@
+/* Discount Area CSS */
+.discount-area {
+    position: relative;
+    z-index: 1;
+    background-color: #3c3c3c;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+    .discount-area .discount-text {
+      position: relative;
+      z-index: 1; }
+        .discount-area .discount-text h2 {
+          font-size: 36px;
+          margin-bottom: 10px;
+          color: ghostwhite; }
+        .discount-area .discount-text p {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: gainsboro;}
+/* Discount Area CSS */
+
+/* About us Area CSS */
+.about-area {
+    position: relative;
+    z-index: 1;
+    background-color: black;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    }
+    .about-area .about-text {
+        position: relative;
+        z-index: 1;}
+        .about-area .about-text h2 {
+            font-size: 36px;
+            margin-bottom: 0px;
+            color: azure;}
+        .about-area .about-text p {
+            font-size: 20px;
+            margin-bottom: 0px;
+            color: snow;
+        }
+/* About us Area CSS */     
+
+/* Fotter Area CSS */
+.footer{
+    position: relative;
+    z-index: 1;
+    background-color: rgb(0, 1, 2) ;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    }
+    .footer .footer-text {
+        font-size: 15px;
+        margin-bottom: 0px;
+        color: snow;
+    }
+
+
+/* Form */
+.form{
+    padding-top: 1%;
+    margin-bottom: 1%;
+}
+    .form .form-text{
+        font-size: 20px;
+        margin-bottom: 12%;
+        color: rgb(9, 9, 14); 
+    }
+
+/* Heading area */
+.heading-area{
+    position: relative;
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+
+/* Body */

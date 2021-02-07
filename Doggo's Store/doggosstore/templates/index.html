@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<!-- add a big banner to welcome user -->
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="{{url_for('static',filename='img/DogSlider4.jpg')}}" height="70%" width="60%" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{{url_for('static',filename='img/DogSlider2.jpg')}}" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{{url_for('static',filename='img/DogSlider3.jpg')}}" alt="Third slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{{url_for('static',filename='img/DogSlider.jpg')}}" alt="Third slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{{url_for('static',filename='img/DogSlider5.jpg')}}" alt="Third slide">
+      </div>
+      
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+{% endblock %}
+
+{% block main %}
+   <!-- marketing information -->
+ <!-- marketing information -->
+ <section class="first">
+    <div>
+    <div class="container">
+        <div class="text-white text-center">
+            <div>
+                <p class="h1 text-light mb-4">Why us?</p>
+            </div>
+        </div>
+        <!-- CSS Grid -->
+        
+        <div class="row">
+            <div class="col-md-6">
+                <article>
+                    <h3 class="h3 text-light">We Know U love your Doggo</h3>
+                </article>
+
+            </div>
+            <div>
+                <div class="col-md-12">
+                    <article>
+                        <h3 class="h3 text-light">We also Want the best for your Doggo</h3>
+                    </article>
+                </div>
+            </div>
+            
+
+        </div>
+        <!-- Horizontal Rule -->
+        <hr>
+    </div>
+    </div>
+</section>
+
+<!-- display the Products to the user -->
+<section>
+    <div class="text-dark text-center">
+        <div>
+            <p class="h2 text-dark mb-4" id="product_anchor">PRODUCTS OFFERED:-</p>
+        </div>
+    </div>
+    <div class="card-deck">
+
+        {% for product in product%}
+        <div class="card">
+            <a href= "{{ url_for('main.items', productid=product.id) }}">
+            <img class="card-img-top" src="{{url_for('static', filename='img/'+product.image)}}" alt="Card image">
+            </a>
+            <div class="card-body">
+                <h4 class="card-title">{{product.name}}</h4>
+                <p class="card-text">{{product.description}}</p>
+            </div>
+            <div class="card-footer"><a href= "{{ url_for('main.items', productid=product.id) }}" class="btn btn-dark">Items</a></div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<section class="about-area" id="aboutus">
+    <div class="about-text">
+        <h2 class="display-2 text-center" >About us.</h2>
+        <p class="lead text-center">
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at lorem mollis, elementum tortor at, ultricies arcu.
+            Duis metus nibh, sollicitudin ac nunc eget, facilisis posuere purus. Aliquam vestibulum porta tincidunt. Quisque sed ultricies velit.
+             Proin non odio vitae ante egestas malesuada non accumsan sem. Mauris consequat fermentum ornare. 
+             Sed dignissim consequat lacus, sed facilisis metus bibendum eu. Sed suscipit nisl sem, vitae cursus ipsum pulvinar eu.
+              Nulla ullamcorper erat vitae ipsum elementum, eu egestas dui tempor. Aliquam scelerisque iaculis sodales. Integer nec velit leo.
+               Pellentesque mollis nunc vel mauris gravida porta.
+
+           Nulla ac volutpat augue. Sed id aliquet leo, eu aliquam ligula. Cras ultricies augue mauris, sit amet vehicula libero venenatis ut.
+            Donec est erat, pellentesque sit amet erat eu, dictum rhoncus orci. Nulla purus dolor, consequat ut condimentum at, bibendum quis quam.
+             Integer rutrum augue a porttitor elementum. Donec eu odio feugiat, luctus massa id, faucibus nisl.
+        </p>
+    </div>
+
+</section>
+
+{% endblock %}
+

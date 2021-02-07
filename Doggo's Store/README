@@ -1,0 +1,15 @@
+This is a website about dog products this website include items based on Food, Toys and Clothes 
+
+The technologies user in creating the website are 
+1. Python
+2. HTML, CSS and Bootstrap : they were used to create the base pages and other designing 
+3. DB Browser was used to alter and implement data with the help of SQLALCHEMY
+4. Python Flask Framework on which the wesite is based and handeled 
+5. Flask WTF forms are used to create the checkout form in the base of the website 
+
+
+How the Website works
+:-  First go in the vscode to the run.py and click on test python file in terminal to launch the local server http://127.0.0.1:5000/
+:-  Then either hover the mouse to follow the link 
+:-  U will be able to view the website in the Browser
+
