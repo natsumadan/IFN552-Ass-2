@@ -1,0 +1,7 @@
+Description 
+
+This Website deals with Dog Products. There are three main Categories of Products such as DOG FOOD, DOG TOYS and DOG CLOTHES. 
+This site allows you to search products, add products in your cart even allow you to delete unwanted products. 
+The site also contains the checkout page which allow you to make order of the products selected in the cart. 
+
+You can see the website presentation video on      Youtube :- https://youtu.be/h6cLhkO3Zh0  
